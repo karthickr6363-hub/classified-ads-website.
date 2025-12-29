@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Ads - AdClassify</title>
+    <!-- Base path detection for GitHub Pages -->
+    <script src="../../assets/js/github-pages-base.js"></script>
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    <link rel="alternate icon" href="../../favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <div id="header-placeholder"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="mb-8">
+            <div class="flex items-center justify-between mb-4">
+                <h1 class="text-3xl font-bold text-gray-900">My Ads</h1>
+                <a href="/pages/ads/post-ad.html" class="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all">
+                    <i class="fas fa-plus mr-2"></i>Post New Ad
+                </a>
+            </div>
+            
+            <!-- Filter Tabs -->
+            <div class="flex space-x-4 border-b border-gray-200">
+                <button class="px-4 py-3 border-b-2 border-purple-600 text-purple-600 font-medium">All (24)</button>
+                <button class="px-4 py-3 text-gray-600 hover:text-purple-600 font-medium">Active (18)</button>
+                <button class="px-4 py-3 text-gray-600 hover:text-purple-600 font-medium">Pending (3)</button>
+                <button class="px-4 py-3 text-gray-600 hover:text-purple-600 font-medium">Sold (3)</button>
+                <button class="px-4 py-3 text-gray-600 hover:text-purple-600 font-medium">Expired (0)</button>
+            </div>
+        </div>
+
+        <!-- Ads Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Ad Card 1 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all">
+                <div class="relative h-48">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop" 
+                         alt="Ad" 
+                         class="w-full h-full object-cover">
+                    <span class="absolute top-4 left-4 px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-semibold">Active</span>
+                    <div class="absolute top-4 right-4 flex space-x-2">
+                        <button class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors">
+                            <i class="fas fa-edit text-gray-600 text-sm"></i>
+                        </button>
+                        <button class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-red-100 transition-colors">
+                            <i class="fas fa-trash text-red-600 text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">iPhone 14 Pro Max</h3>
+                    <p class="text-2xl font-bold text-purple-600 mb-3">$999</p>
+                    <div class="flex items-center justify-between text-sm text-gray-600 mb-4">
+                        <span><i class="fas fa-eye mr-1"></i>145 views</span>
+                        <span><i class="fas fa-comments mr-1"></i>5 messages</span>
+                    </div>
+                    <div class="flex space-x-2">
+                        <a href="/pages/ads/detail.html?id=1" class="flex-1 text-center px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors text-sm font-medium">
+                            View
+                        </a>
+                        <button class="flex-1 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-sm font-medium">
+                            Boost
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ad Card 2 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all">
+                <div class="relative h-48">
+                    <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=400&h=300&fit=crop" 
+                         alt="Ad" 
+                         class="w-full h-full object-cover">
+                    <span class="absolute top-4 left-4 px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-semibold">Active</span>
+                    <div class="absolute top-4 right-4 flex space-x-2">
+                        <button class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors">
+                            <i class="fas fa-edit text-gray-600 text-sm"></i>
+                        </button>
+                        <button class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-red-100 transition-colors">
+                            <i class="fas fa-trash text-red-600 text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">2023 Honda Civic</h3>
+                    <p class="text-2xl font-bold text-purple-600 mb-3">$24,500</p>
+                    <div class="flex items-center justify-between text-sm text-gray-600 mb-4">
+                        <span><i class="fas fa-eye mr-1"></i>89 views</span>
+                        <span><i class="fas fa-comments mr-1"></i>12 messages</span>
+                    </div>
+                    <div class="flex space-x-2">
+                        <a href="/pages/ads/detail.html?id=2" class="flex-1 text-center px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors text-sm font-medium">
+                            View
+                        </a>
+                        <button class="flex-1 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-sm font-medium">
+                            Boost
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ad Card 3 - Pending -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all">
+                <div class="relative h-48">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop" 
+                         alt="Ad" 
+                         class="w-full h-full object-cover opacity-75">
+                    <span class="absolute top-4 left-4 px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs font-semibold">Pending</span>
+                    <div class="absolute top-4 right-4 flex space-x-2">
+                        <button class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors">
+                            <i class="fas fa-edit text-gray-600 text-sm"></i>
+                        </button>
+                        <button class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-red-100 transition-colors">
+                            <i class="fas fa-trash text-red-600 text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Vintage Leather Sofa</h3>
+                    <p class="text-2xl font-bold text-purple-600 mb-3">$850</p>
+                    <div class="text-sm text-yellow-600 mb-4">
+                        <i class="fas fa-clock mr-1"></i>Awaiting approval
+                    </div>
+                    <button class="w-full px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors text-sm font-medium">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        const base = window.BASE_PATH || '/';
+        fetch(base + 'components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                const placeholder = document.getElementById('header-placeholder');
+                if (placeholder) {
+                    placeholder.innerHTML = data;
+                    if (typeof fixLinksInContainer === 'function') fixLinksInContainer(placeholder);
+                }
+            });
+        fetch(base + 'components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                const placeholder = document.getElementById('footer-placeholder');
+                if (placeholder) {
+                    placeholder.innerHTML = data;
+                    if (typeof fixLinksInContainer === 'function') fixLinksInContainer(placeholder);
+                }
+            });
+    </script>
+    <script src="../../assets/js/main.js"></script>
+</body>
+</html>
+

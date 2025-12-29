@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post an Ad - AdClassify</title>
+    <!-- Base path detection for GitHub Pages -->
+    <script src="../../assets/js/github-pages-base.js"></script>
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    <link rel="alternate icon" href="../../favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-gray-100">
+    <div id="header-placeholder"></div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Header with Progress Indicator -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Post Your Ad</h1>
+            <div class="flex items-center justify-center space-x-4 max-w-md mx-auto">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
+                    <div class="ml-2 text-sm font-medium text-gray-900">Basic Info</div>
+                </div>
+                <div class="flex-1 h-1 bg-gray-200 rounded">
+                    <div class="h-1 bg-purple-600 rounded" style="width: 33%"></div>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-gray-200 text-gray-500 rounded-full flex items-center justify-center font-bold">2</div>
+                    <div class="ml-2 text-sm font-medium text-gray-500">Details</div>
+                </div>
+                <div class="flex-1 h-1 bg-gray-200 rounded"></div>
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-gray-200 text-gray-500 rounded-full flex items-center justify-center font-bold">3</div>
+                    <div class="ml-2 text-sm font-medium text-gray-500">Publish</div>
+                </div>
+            </div>
+        </div>
+
+        <form id="postAdForm" class="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
+            <!-- Step 1: Basic Information -->
+            <div id="step1" class="step-panel">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center justify-center">
+                    <span class="w-10 h-10 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mr-3">1</span>
+                    Basic Information
+                </h2>
+
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Category *</label>
+                        <select required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                            <option value="">Select a category</option>
+                            <option>Cars</option>
+                            <option>Electronics</option>
+                            <option>Real Estate</option>
+                            <option>Jobs</option>
+                            <option>Furniture</option>
+                            <option>Mobiles</option>
+                            <option>Fashion</option>
+                            <option>Sports</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Subcategory</label>
+                        <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                            <option value="">Select a subcategory</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Ad Title *</label>
+                        <input type="text" required 
+                               placeholder="e.g., iPhone 14 Pro Max - Brand New"
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                        <p class="mt-1 text-sm text-gray-500">Be specific and descriptive</p>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Price *</label>
+                        <div class="flex items-center space-x-4">
+                            <div class="flex-1 relative">
+                                <span class="absolute left-4 top-3 text-gray-500">$</span>
+                                <input type="number" required 
+                                       placeholder="0.00"
+                                       class="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                            </div>
+                            <label class="flex items-center px-4 py-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                                <input type="checkbox" class="w-4 h-4 text-purple-600 rounded">
+                                <span class="ml-2 text-sm text-gray-700">Negotiable</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Condition *</label>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <label class="flex items-center p-4 border-2 border-gray-200 rounded-xl cursor-pointer hover:border-purple-500 transition-colors">
+                                <input type="radio" name="condition" value="new" required class="w-4 h-4 text-purple-600">
+                                <span class="ml-3 font-medium">New</span>
+                            </label>
+                            <label class="flex items-center p-4 border-2 border-gray-200 rounded-xl cursor-pointer hover:border-purple-500 transition-colors">
+                                <input type="radio" name="condition" value="like-new" required class="w-4 h-4 text-purple-600">
+                                <span class="ml-3 font-medium">Like New</span>
+                            </label>
+                            <label class="flex items-center p-4 border-2 border-gray-200 rounded-xl cursor-pointer hover:border-purple-500 transition-colors">
+                                <input type="radio" name="condition" value="used" required class="w-4 h-4 text-purple-600">
+                                <span class="ml-3 font-medium">Used</span>
+                            </label>
+                            <label class="flex items-center p-4 border-2 border-gray-200 rounded-xl cursor-pointer hover:border-purple-500 transition-colors">
+                                <input type="radio" name="condition" value="for-parts" required class="w-4 h-4 text-purple-600">
+                                <span class="ml-3 font-medium">For Parts</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-end pt-4">
+                        <button type="button" onclick="nextStep(2)" 
+                                class="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all">
+                            Next Step <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: Details & Images -->
+            <div id="step2" class="step-panel hidden">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center justify-center">
+                    <span class="w-10 h-10 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mr-3">2</span>
+                    Details & Images
+                </h2>
+
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Description *</label>
+                        <textarea rows="8" required
+                                  placeholder="Describe your item in detail. Include features, condition, reason for selling, etc."
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"></textarea>
+                        <p class="mt-1 text-sm text-gray-500">Minimum 50 characters</p>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Upload Images *</label>
+                        <div class="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-purple-500 transition-colors">
+                            <input type="file" id="imageUpload" multiple accept="image/*" 
+                                   onchange="previewMultipleImages(this, 'imagePreview')"
+                                   class="hidden">
+                            <label for="imageUpload" class="cursor-pointer">
+                                <i class="fas fa-cloud-upload-alt text-5xl text-gray-400 mb-4"></i>
+                                <div class="text-lg font-medium text-gray-700 mb-2">Click to upload or drag and drop</div>
+                                <div class="text-sm text-gray-500">PNG, JPG, GIF up to 10MB (Max 10 images)</div>
+                            </label>
+                        </div>
+                        <div id="imagePreview" class="grid grid-cols-2 md:grid-cols-5 gap-4 mt-4"></div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Location *</label>
+                            <input type="text" required placeholder="City"
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">ZIP Code</label>
+                            <input type="text" placeholder="12345"
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between pt-4">
+                        <button type="button" onclick="prevStep(1)" 
+                                class="px-8 py-3 border-2 border-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+                            <i class="fas fa-arrow-left mr-2"></i> Back
+                        </button>
+                        <button type="button" onclick="nextStep(3)" 
+                                class="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all">
+                            Next Step <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: Review & Publish -->
+            <div id="step3" class="step-panel hidden">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center justify-center">
+                    <span class="w-10 h-10 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mr-3">3</span>
+                    Review & Publish
+                </h2>
+
+                <div class="space-y-6">
+                    <!-- Ad Preview -->
+                    <div class="bg-gray-50 rounded-xl p-6 mb-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4 text-center">Ad Preview</h3>
+                        <div class="bg-white rounded-lg shadow-md p-4">
+                            <div class="h-48 bg-gray-200 rounded-lg mb-4"></div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2 text-center">Your Ad Title</h4>
+                            <p class="text-purple-600 text-2xl font-bold mb-2 text-center">$0.00</p>
+                            <p class="text-gray-600 text-sm text-center">Your description will appear here...</p>
+                        </div>
+                    </div>
+
+                    <!-- Promotion Options -->
+                    <div class="border-2 border-gray-200 rounded-xl p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4 text-center">Boost Your Ad (Optional)</h3>
+                        <div class="space-y-4">
+                            <label class="flex items-start p-4 border-2 border-purple-200 bg-purple-50 rounded-xl cursor-pointer">
+                                <input type="radio" name="boost" value="free" checked class="mt-1 w-4 h-4 text-purple-600">
+                                <div class="ml-3 flex-1">
+                                    <div class="font-semibold text-gray-900">Free Listing</div>
+                                    <div class="text-sm text-gray-600">Standard visibility</div>
+                                </div>
+                            </label>
+                            <label class="flex items-start p-4 border-2 border-gray-200 rounded-xl cursor-pointer hover:border-purple-300 transition-colors">
+                                <input type="radio" name="boost" value="featured" class="mt-1 w-4 h-4 text-purple-600">
+                                <div class="ml-3 flex-1">
+                                    <div class="font-semibold text-gray-900">Featured Ad - $9.99</div>
+                                    <div class="text-sm text-gray-600">3x more visibility, highlighted in search</div>
+                                </div>
+                            </label>
+                            <label class="flex items-start p-4 border-2 border-gray-200 rounded-xl cursor-pointer hover:border-purple-300 transition-colors">
+                                <input type="radio" name="boost" value="premium" class="mt-1 w-4 h-4 text-purple-600">
+                                <div class="ml-3 flex-1">
+                                    <div class="font-semibold text-gray-900">Premium Ad - $19.99</div>
+                                    <div class="text-sm text-gray-600">10x visibility, top placement, featured badge</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center">
+                        <input type="checkbox" required class="w-4 h-4 text-purple-600 rounded">
+                        <label class="ml-2 text-sm text-gray-600">
+                            I confirm that this ad complies with our <a href="/pages/misc/terms.html" class="text-purple-600 hover:underline">Terms of Service</a>
+                        </label>
+                    </div>
+
+                    <div class="flex justify-between pt-4">
+                        <button type="button" onclick="prevStep(2)" 
+                                class="px-8 py-3 border-2 border-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+                            <i class="fas fa-arrow-left mr-2"></i> Back
+                        </button>
+                        <button type="submit" 
+                                class="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all">
+                            <i class="fas fa-paper-plane mr-2"></i> Publish Ad
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        const base = window.BASE_PATH || '/';
+        fetch(base + 'components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                const placeholder = document.getElementById('header-placeholder');
+                if (placeholder) {
+                    placeholder.innerHTML = data;
+                    if (typeof fixLinksInContainer === 'function') fixLinksInContainer(placeholder);
+                }
+            });
+        fetch(base + 'components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                const placeholder = document.getElementById('footer-placeholder');
+                if (placeholder) {
+                    placeholder.innerHTML = data;
+                    if (typeof fixLinksInContainer === 'function') fixLinksInContainer(placeholder);
+                }
+            });
+
+        function nextStep(step) {
+            document.querySelectorAll('.step-panel').forEach(el => el.classList.add('hidden'));
+            document.getElementById('step' + step).classList.remove('hidden');
+        }
+
+        function prevStep(step) {
+            document.querySelectorAll('.step-panel').forEach(el => el.classList.add('hidden'));
+            document.getElementById('step' + step).classList.remove('hidden');
+        }
+
+        document.getElementById('postAdForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (validateForm('postAdForm')) {
+                showToast('Ad posted successfully!', 'success');
+                setTimeout(() => {
+                    const base = window.BASE_PATH || '/';
+                    window.location.href = base + 'pages/user/my-ads.html';
+                }, 1500);
+            }
+        });
+    </script>
+    <script src="../../assets/js/main.js"></script>
+</body>
+</html>
+

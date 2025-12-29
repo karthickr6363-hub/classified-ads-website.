@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Ads - AdClassify</title>
+    <!-- Base path detection for GitHub Pages -->
+    <script src="../../assets/js/github-pages-base.js"></script>
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    <link rel="alternate icon" href="../../favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <div id="header-placeholder"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Saved Ads</h1>
+            <p class="text-gray-600">Your favorite listings in one place</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Saved Ad 1 -->
+            <a href="/pages/ads/detail.html?id=1" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all group">
+                <div class="relative h-48">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop" 
+                         alt="Ad" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <button class="absolute top-4 right-4 w-10 h-10 bg-red-500 text-white rounded-full flex items-center justify-center hover:bg-red-600 transition-colors">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                </div>
+                <div class="p-5">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">iPhone 14 Pro Max</h3>
+                    <p class="text-2xl font-bold text-purple-600 mb-3">$999</p>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <i class="fas fa-map-marker-alt mr-2"></i>New York, NY
+                    </div>
+                </div>
+            </a>
+            <!-- More saved ads... -->
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        const base = window.BASE_PATH || '/';
+        fetch(base + 'components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                const placeholder = document.getElementById('header-placeholder');
+                if (placeholder) {
+                    placeholder.innerHTML = data;
+                    if (typeof fixLinksInContainer === 'function') fixLinksInContainer(placeholder);
+                }
+            });
+        fetch(base + 'components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                const placeholder = document.getElementById('footer-placeholder');
+                if (placeholder) {
+                    placeholder.innerHTML = data;
+                    if (typeof fixLinksInContainer === 'function') fixLinksInContainer(placeholder);
+                }
+            });
+    </script>
+    <script src="../../assets/js/main.js"></script>
+</body>
+</html>
+

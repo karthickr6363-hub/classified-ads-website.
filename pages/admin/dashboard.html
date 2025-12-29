@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - AdClassify</title>
+    <!-- Base path detection for GitHub Pages -->
+    <script src="../../assets/js/github-pages-base.js"></script>
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    <link rel="alternate icon" href="../../favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Admin Header -->
+    <header class="bg-gray-900 text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-8">
+                    <a href="/pages/admin/dashboard.html" class="text-2xl font-bold">AdClassify Admin</a>
+                    <nav class="hidden md:flex space-x-4">
+                        <a href="/pages/admin/dashboard.html" class="px-3 py-2 bg-gray-800 rounded-lg">Dashboard</a>
+                        <a href="/pages/admin/users.html" class="px-3 py-2 hover:bg-gray-800 rounded-lg transition-colors">Users</a>
+                        <a href="/pages/admin/ads.html" class="px-3 py-2 hover:bg-gray-800 rounded-lg transition-colors">Ads</a>
+                        <a href="/pages/admin/categories.html" class="px-3 py-2 hover:bg-gray-800 rounded-lg transition-colors">Categories</a>
+                        <a href="/pages/admin/reports.html" class="px-3 py-2 hover:bg-gray-800 rounded-lg transition-colors">Reports</a>
+                    </nav>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="/index.html" class="text-sm hover:text-gray-300">View Site</a>
+                    <a href="/pages/auth/login.html" class="px-4 py-2 bg-red-600 rounded-lg hover:bg-red-700 transition-colors">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Stats Overview -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div class="bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl p-6 text-white shadow-lg">
+                <div class="flex items-center justify-between mb-4">
+                    <i class="fas fa-users text-3xl opacity-75"></i>
+                    <span class="text-3xl font-bold">12,543</span>
+                </div>
+                <div class="text-white/90 font-medium">Total Users</div>
+                <div class="text-sm text-white/75 mt-1">+234 this month</div>
+            </div>
+
+            <div class="bg-gradient-to-br from-green-500 to-green-600 rounded-xl p-6 text-white shadow-lg">
+                <div class="flex items-center justify-between mb-4">
+                    <i class="fas fa-box text-3xl opacity-75"></i>
+                    <span class="text-3xl font-bold">45,892</span>
+                </div>
+                <div class="text-white/90 font-medium">Total Ads</div>
+                <div class="text-sm text-white/75 mt-1">+1,234 this month</div>
+            </div>
+
+            <div class="bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl p-6 text-white shadow-lg">
+                <div class="flex items-center justify-between mb-4">
+                    <i class="fas fa-clock text-3xl opacity-75"></i>
+                    <span class="text-3xl font-bold">234</span>
+                </div>
+                <div class="text-white/90 font-medium">Pending Approval</div>
+                <div class="text-sm text-white/75 mt-1">Requires attention</div>
+            </div>
+
+            <div class="bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl p-6 text-white shadow-lg">
+                <div class="flex items-center justify-between mb-4">
+                    <i class="fas fa-dollar-sign text-3xl opacity-75"></i>
+                    <span class="text-3xl font-bold">$24.5K</span>
+                </div>
+                <div class="text-white/90 font-medium">Revenue</div>
+                <div class="text-sm text-white/75 mt-1">This month</div>
+            </div>
+        </div>
+
+        <!-- Analytics Overview -->
+        <div class="bg-white rounded-xl shadow-lg p-6 mb-6">
+            <h2 class="text-xl font-bold text-gray-900 mb-6">Analytics Overview</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-600 mb-3">User Growth</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-500">This Week</span>
+                            <span class="text-sm font-bold text-gray-900">+156</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-600 h-2 rounded-full" style="width: 75%"></div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-500">Last Week</span>
+                            <span class="text-sm text-gray-600">+142</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-600 mb-3">Ad Postings</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-500">This Week</span>
+                            <span class="text-sm font-bold text-gray-900">+1,234</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-green-600 h-2 rounded-full" style="width: 85%"></div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-500">Last Week</span>
+                            <span class="text-sm text-gray-600">+1,189</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-600 mb-3">Revenue Trend</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-500">This Week</span>
+                            <span class="text-sm font-bold text-gray-900">$8,456</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-purple-600 h-2 rounded-full" style="width: 90%"></div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-500">Last Week</span>
+                            <span class="text-sm text-gray-600">$7,890</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-6">
+            <!-- Recent Activity -->
+            <div class="lg:col-span-2 space-y-6">
+                <!-- Pending Ads -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-xl font-bold text-gray-900">Pending Ads Approval</h2>
+                        <a href="/pages/admin/ads.html" class="text-purple-600 hover:text-purple-700 text-sm font-medium">View All →</a>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4 p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=80&h=80&fit=crop" 
+                                 alt="Ad" 
+                                 class="w-16 h-16 object-cover rounded-lg">
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-gray-900">iPhone 14 Pro Max</h4>
+                                <p class="text-sm text-gray-600">Posted by John Doe • 2 hours ago</p>
+                                <p class="text-xs text-gray-500 mt-1">Electronics • $999</p>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors text-sm">
+                                    Approve
+                                </button>
+                                <button class="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors text-sm">
+                                    Reject
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4 p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+                            <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=80&h=80&fit=crop" 
+                                 alt="Ad" 
+                                 class="w-16 h-16 object-cover rounded-lg">
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-gray-900">2023 Honda Civic</h4>
+                                <p class="text-sm text-gray-600">Posted by Sarah Johnson • 5 hours ago</p>
+                                <p class="text-xs text-gray-500 mt-1">Vehicles • $24,500</p>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors text-sm">
+                                    Approve
+                                </button>
+                                <button class="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors text-sm">
+                                    Reject
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4 p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=80&h=80&fit=crop" 
+                                 alt="Ad" 
+                                 class="w-16 h-16 object-cover rounded-lg">
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-gray-900">Vintage Leather Sofa</h4>
+                                <p class="text-sm text-gray-600">Posted by Mike Wilson • 1 day ago</p>
+                                <p class="text-xs text-gray-500 mt-1">Furniture • $850</p>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors text-sm">
+                                    Approve
+                                </button>
+                                <button class="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors text-sm">
+                                    Reject
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4 p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=80&h=80&fit=crop" 
+                                 alt="Ad" 
+                                 class="w-16 h-16 object-cover rounded-lg">
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-gray-900">Rolex Watch</h4>
+                                <p class="text-sm text-gray-600">Posted by Emily Davis • 1 day ago</p>
+                                <p class="text-xs text-gray-500 mt-1">Accessories • $3,200</p>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors text-sm">
+                                    Approve
+                                </button>
+                                <button class="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors text-sm">
+                                    Reject
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Users -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-xl font-bold text-gray-900">Recent Users</h2>
+                        <a href="/pages/admin/users.html" class="text-purple-600 hover:text-purple-700 text-sm font-medium">View All →</a>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="border-b border-gray-200">
+                                    <th class="text-left py-3 px-4 text-sm font-semibold text-gray-700">User</th>
+                                    <th class="text-left py-3 px-4 text-sm font-semibold text-gray-700">Email</th>
+                                    <th class="text-left py-3 px-4 text-sm font-semibold text-gray-700">Joined</th>
+                                    <th class="text-left py-3 px-4 text-sm font-semibold text-gray-700">Status</th>
+                                    <th class="text-left py-3 px-4 text-sm font-semibold text-gray-700">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                    <td class="py-3 px-4">
+                                        <div class="flex items-center space-x-3">
+                                            <img src="https://ui-avatars.com/api/?name=John+Doe&size=40" alt="User" class="w-8 h-8 rounded-full">
+                                            <span class="font-medium">John Doe</span>
+                                        </div>
+                                    </td>
+                                    <td class="py-3 px-4 text-sm text-gray-600">john@example.com</td>
+                                    <td class="py-3 px-4 text-sm text-gray-600">2 days ago</td>
+                                    <td class="py-3 px-4">
+                                        <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Active</span>
+                                    </td>
+                                    <td class="py-3 px-4">
+                                        <button class="text-purple-600 hover:text-purple-700 text-sm">View</button>
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                    <td class="py-3 px-4">
+                                        <div class="flex items-center space-x-3">
+                                            <img src="https://ui-avatars.com/api/?name=Sarah+Johnson&size=40" alt="User" class="w-8 h-8 rounded-full">
+                                            <span class="font-medium">Sarah Johnson</span>
+                                        </div>
+                                    </td>
+                                    <td class="py-3 px-4 text-sm text-gray-600">sarah@example.com</td>
+                                    <td class="py-3 px-4 text-sm text-gray-600">3 days ago</td>
+                                    <td class="py-3 px-4">
+                                        <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Active</span>
+                                    </td>
+                                    <td class="py-3 px-4">
+                                        <button class="text-purple-600 hover:text-purple-700 text-sm">View</button>
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                    <td class="py-3 px-4">
+                                        <div class="flex items-center space-x-3">
+                                            <img src="https://ui-avatars.com/api/?name=Mike+Wilson&size=40" alt="User" class="w-8 h-8 rounded-full">
+                                            <span class="font-medium">Mike Wilson</span>
+                                        </div>
+                                    </td>
+                                    <td class="py-3 px-4 text-sm text-gray-600">mike@example.com</td>
+                                    <td class="py-3 px-4 text-sm text-gray-600">5 days ago</td>
+                                    <td class="py-3 px-4">
+                                        <span class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full">Pending</span>
+                                    </td>
+                                    <td class="py-3 px-4">
+                                        <button class="text-purple-600 hover:text-purple-700 text-sm">View</button>
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                    <td class="py-3 px-4">
+                                        <div class="flex items-center space-x-3">
+                                            <img src="https://ui-avatars.com/api/?name=Emily+Davis&size=40" alt="User" class="w-8 h-8 rounded-full">
+                                            <span class="font-medium">Emily Davis</span>
+                                        </div>
+                                    </td>
+                                    <td class="py-3 px-4 text-sm text-gray-600">emily@example.com</td>
+                                    <td class="py-3 px-4 text-sm text-gray-600">1 week ago</td>
+                                    <td class="py-3 px-4">
+                                        <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Active</span>
+                                    </td>
+                                    <td class="py-3 px-4">
+                                        <button class="text-purple-600 hover:text-purple-700 text-sm">View</button>
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                    <td class="py-3 px-4">
+                                        <div class="flex items-center space-x-3">
+                                            <img src="https://ui-avatars.com/api/?name=David+Brown&size=40" alt="User" class="w-8 h-8 rounded-full">
+                                            <span class="font-medium">David Brown</span>
+                                        </div>
+                                    </td>
+                                    <td class="py-3 px-4 text-sm text-gray-600">david@example.com</td>
+                                    <td class="py-3 px-4 text-sm text-gray-600">1 week ago</td>
+                                    <td class="py-3 px-4">
+                                        <span class="px-2 py-1 bg-red-100 text-red-800 text-xs rounded-full">Suspended</span>
+                                    </td>
+                                    <td class="py-3 px-4">
+                                        <button class="text-purple-600 hover:text-purple-700 text-sm">View</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Recent Reports -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-xl font-bold text-gray-900">Recent Reports</h2>
+                        <a href="/pages/admin/reports.html" class="text-purple-600 hover:text-purple-700 text-sm font-medium">View All →</a>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4 p-4 border border-red-200 bg-red-50 rounded-lg">
+                            <div class="flex-shrink-0 w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-flag text-red-600"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-gray-900">Inappropriate Content</h4>
+                                <p class="text-sm text-gray-600">Reported by: Anonymous • Ad: "iPhone 14 Pro Max"</p>
+                                <p class="text-xs text-gray-500 mt-1">2 hours ago</p>
+                            </div>
+                            <button class="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors text-sm">
+                                Review
+                            </button>
+                        </div>
+
+                        <div class="flex items-start space-x-4 p-4 border border-yellow-200 bg-yellow-50 rounded-lg">
+                            <div class="flex-shrink-0 w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-exclamation-triangle text-yellow-600"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-gray-900">Suspicious Activity</h4>
+                                <p class="text-sm text-gray-600">Reported by: Sarah Johnson • User: Mike Wilson</p>
+                                <p class="text-xs text-gray-500 mt-1">5 hours ago</p>
+                            </div>
+                            <button class="px-4 py-2 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition-colors text-sm">
+                                Review
+                            </button>
+                        </div>
+
+                        <div class="flex items-start space-x-4 p-4 border border-gray-200 rounded-lg">
+                            <div class="flex-shrink-0 w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-flag text-gray-600"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-gray-900">Spam Report</h4>
+                                <p class="text-sm text-gray-600">Reported by: John Doe • Ad: "2023 Honda Civic"</p>
+                                <p class="text-xs text-gray-500 mt-1">1 day ago</p>
+                            </div>
+                            <button class="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors text-sm">
+                                Review
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Activity Timeline -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h2 class="text-xl font-bold text-gray-900 mb-4">Recent Activity</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-check text-green-600"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-gray-900">Ad Approved</h4>
+                                <p class="text-sm text-gray-600">"MacBook Pro 2023" by Emily Davis</p>
+                                <p class="text-xs text-gray-500 mt-1">30 minutes ago</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-user-plus text-blue-600"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-gray-900">New User Registered</h4>
+                                <p class="text-sm text-gray-600">John Doe joined the platform</p>
+                                <p class="text-xs text-gray-500 mt-1">2 hours ago</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-dollar-sign text-purple-600"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-gray-900">Payment Received</h4>
+                                <p class="text-sm text-gray-600">Premium ad upgrade - $49.99</p>
+                                <p class="text-xs text-gray-500 mt-1">3 hours ago</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-ban text-red-600"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-gray-900">User Suspended</h4>
+                                <p class="text-sm text-gray-600">David Brown - Violation of terms</p>
+                                <p class="text-xs text-gray-500 mt-1">1 day ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="space-y-6">
+                <!-- Quick Actions -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="text-lg font-bold text-gray-900 mb-4">Quick Actions</h3>
+                    <div class="space-y-3">
+                        <a href="/pages/admin/ads.html?filter=pending" class="block px-4 py-3 bg-purple-50 text-purple-600 rounded-lg font-medium hover:bg-purple-100 transition-colors">
+                            <i class="fas fa-check-circle mr-2"></i>Review Ads
+                        </a>
+                        <a href="/pages/admin/users.html?filter=new" class="block px-4 py-3 bg-blue-50 text-blue-600 rounded-lg font-medium hover:bg-blue-100 transition-colors">
+                            <i class="fas fa-user-plus mr-2"></i>New Users
+                        </a>
+                        <a href="/pages/admin/reports.html" class="block px-4 py-3 bg-red-50 text-red-600 rounded-lg font-medium hover:bg-red-100 transition-colors">
+                            <i class="fas fa-flag mr-2"></i>Reports
+                        </a>
+                        <a href="/pages/admin/categories.html" class="block px-4 py-3 bg-green-50 text-green-600 rounded-lg font-medium hover:bg-green-100 transition-colors">
+                            <i class="fas fa-tags mr-2"></i>Manage Categories
+                        </a>
+                        <a href="/pages/admin/settings.html" class="block px-4 py-3 bg-gray-50 text-gray-600 rounded-lg font-medium hover:bg-gray-100 transition-colors">
+                            <i class="fas fa-cog mr-2"></i>Settings
+                        </a>
+                    </div>
+                </div>
+
+                <!-- System Status -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="text-lg font-bold text-gray-900 mb-4">System Status</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-600">Server Status</span>
+                            <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Online</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-600">Database</span>
+                            <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Healthy</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-600">API Status</span>
+                            <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Operational</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-600">Last Backup</span>
+                            <span class="text-xs text-gray-500">2 hours ago</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-600">Uptime</span>
+                            <span class="text-xs text-gray-500">99.9%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Popular Categories -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="text-lg font-bold text-gray-900 mb-4">Popular Categories</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-mobile-alt text-purple-600"></i>
+                                <span class="text-sm font-medium text-gray-700">Electronics</span>
+                            </div>
+                            <span class="text-sm text-gray-600 font-semibold">12,345</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-car text-blue-600"></i>
+                                <span class="text-sm font-medium text-gray-700">Vehicles</span>
+                            </div>
+                            <span class="text-sm text-gray-600 font-semibold">8,234</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-couch text-green-600"></i>
+                                <span class="text-sm font-medium text-gray-700">Furniture</span>
+                            </div>
+                            <span class="text-sm text-gray-600 font-semibold">5,678</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-tshirt text-orange-600"></i>
+                                <span class="text-sm font-medium text-gray-700">Fashion</span>
+                            </div>
+                            <span class="text-sm text-gray-600 font-semibold">4,567</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-home text-yellow-600"></i>
+                                <span class="text-sm font-medium text-gray-700">Real Estate</span>
+                            </div>
+                            <span class="text-sm text-gray-600 font-semibold">3,456</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Revenue Chart -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="text-lg font-bold text-gray-900 mb-4">Revenue Overview</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm text-gray-600">Today</span>
+                                <span class="text-sm font-bold text-gray-900">$1,234</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm text-gray-600">This Week</span>
+                                <span class="text-sm font-bold text-gray-900">$8,456</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm text-gray-600">This Month</span>
+                                <span class="text-sm font-bold text-gray-900">$24,567</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-600 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notifications -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="text-lg font-bold text-gray-900 mb-4">Notifications</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start space-x-3 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
+                            <i class="fas fa-exclamation-circle text-yellow-600 mt-1"></i>
+                            <div class="flex-1">
+                                <p class="text-sm font-medium text-gray-900">234 ads pending approval</p>
+                                <p class="text-xs text-gray-600 mt-1">Requires immediate attention</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3 p-3 bg-red-50 border border-red-200 rounded-lg">
+                            <i class="fas fa-flag text-red-600 mt-1"></i>
+                            <div class="flex-1">
+                                <p class="text-sm font-medium text-gray-900">12 new reports</p>
+                                <p class="text-xs text-gray-600 mt-1">Need review</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                            <i class="fas fa-users text-blue-600 mt-1"></i>
+                            <div class="flex-1">
+                                <p class="text-sm font-medium text-gray-900">234 new users</p>
+                                <p class="text-xs text-gray-600 mt-1">This month</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script>
+        // Fix all links after page load
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof fixLinksInContainer === 'function') {
+                fixLinksInContainer(document.body);
+            }
+        });
+    </script>
+    <script src="../../assets/js/main.js"></script>
+</body>
+</html>
+

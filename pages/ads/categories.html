@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Categories - AdClassify</title>
+    <!-- Base path detection for GitHub Pages -->
+    <script>
+        (function() {
+            const path = window.location.pathname;
+            const hostname = window.location.hostname;
+            let basePath = '/';
+            
+            if (hostname.includes('github.io')) {
+                const pathParts = path.split('/').filter(p => p && p !== 'index.html' && p !== '');
+                if (pathParts.length > 0) {
+                    const repoName = pathParts[0];
+                    if (repoName && !repoName.match(/\.(html|css|js|png|jpg|jpeg|svg|ico|gif|webp)$/i)) {
+                        basePath = '/' + repoName + '/';
+                    }
+                }
+            }
+            
+            window.BASE_PATH = basePath;
+            if (!document.querySelector('base')) {
+                const base = document.createElement('base');
+                base.href = basePath;
+                document.head.insertBefore(base, document.head.firstChild);
+            }
+        })();
+    </script>
+    
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" href="favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gradient-to-br from-gray-50 via-purple-50 to-blue-50">
+    <div id="header-placeholder"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-6 lg:px-8 py-8 md:py-12">
+        <!-- Header -->
+        <div class="text-center mb-8 md:mb-12">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4">Browse Categories</h1>
+            <p class="text-lg md:text-xl text-gray-600 mb-4 md:mb-6 px-4">Find what you're looking for in our wide range of categories</p>
+            <div class="flex flex-wrap items-center justify-center gap-4 md:gap-6 lg:gap-8 text-xs md:text-sm text-gray-600 px-4">
+                <div class="flex items-center">
+                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                    <span>50,000+ Active Listings</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                    <span>200+ Categories</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                    <span>Verified Sellers</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="max-w-2xl mx-auto mb-8 md:mb-12 px-4">
+            <div class="relative">
+                <input type="text" placeholder="Search categories..." 
+                       class="w-full px-4 md:px-6 py-3 md:py-4 pl-12 md:pl-14 text-base md:text-lg border-2 border-gray-200 rounded-2xl focus:ring-2 focus:ring-purple-500 focus:border-transparent shadow-lg">
+                <i class="fas fa-search absolute left-4 md:left-5 top-4 md:top-5 text-gray-400"></i>
+            </div>
+        </div>
+
+        <!-- Categories Grid - Unique Card Design -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <!-- Category 1 -->
+            <a href="pages/ads/listing.html?category=cars" class="group relative overflow-hidden rounded-2xl md:rounded-3xl bg-white shadow-xl transform hover:scale-105 transition-all duration-300">
+                <div class="absolute inset-0 bg-gradient-to-br from-red-500 to-orange-600 opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                <div class="relative p-6 md:p-8 text-white">
+                    <div class="w-16 md:w-20 h-16 md:h-20 bg-white/20 backdrop-blur-md rounded-xl md:rounded-2xl flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform mx-auto">
+                        <i class="fas fa-car text-3xl md:text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-2 text-center">Cars & Vehicles</h3>
+                    <p class="text-white/90 mb-2 text-sm md:text-base text-center">2,340 active ads</p>
+                    <p class="text-white/80 text-xs md:text-sm mb-3 md:mb-4 text-center">Cars, motorcycles, trucks, RVs, and auto parts. Find your perfect ride or sell your vehicle quickly.</p>
+                    <div class="flex items-center justify-center gap-4 mb-3 md:mb-4">
+                        <span class="text-xs text-white/70">Avg. Price: $15,000</span>
+                        <span class="text-xs text-white/70">+120 this week</span>
+                    </div>
+                    <div class="flex items-center justify-center text-xs md:text-sm font-medium">
+                        <span>View All</span>
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Category 2 -->
+            <a href="/pages/ads/listing.html?category=electronics" class="group relative overflow-hidden rounded-3xl bg-white shadow-xl transform hover:scale-105 transition-all duration-300">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-600 opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                <div class="relative p-8 text-white">
+                    <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
+                        <i class="fas fa-laptop text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 text-center">Electronics</h3>
+                    <p class="text-white/90 mb-2 text-center">5,120 active ads</p>
+                    <p class="text-white/80 text-sm mb-4 text-center">Laptops, smartphones, TVs, gaming consoles, and tech accessories. Stay updated with the latest gadgets.</p>
+                    <div class="flex items-center justify-center gap-4 mb-4">
+                        <span class="text-xs text-white/70">Avg. Price: $450</span>
+                        <span class="text-xs text-white/70">+345 this week</span>
+                    </div>
+                    <div class="flex items-center justify-center text-sm font-medium">
+                        <span>View All</span>
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Category 3 -->
+            <a href="/pages/ads/listing.html?category=real-estate" class="group relative overflow-hidden rounded-3xl bg-white shadow-xl transform hover:scale-105 transition-all duration-300">
+                <div class="absolute inset-0 bg-gradient-to-br from-green-500 to-teal-600 opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                <div class="relative p-8 text-white">
+                    <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
+                        <i class="fas fa-home text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 text-center">Real Estate</h3>
+                    <p class="text-white/90 mb-2 text-center">1,890 active ads</p>
+                    <p class="text-white/80 text-sm mb-4 text-center">Apartments, houses, commercial properties, and land. Find your dream home or investment property.</p>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs text-white/70">Avg. Price: $350,000</span>
+                        <span class="text-xs text-white/70">+89 this week</span>
+                    </div>
+                    <div class="flex items-center justify-center text-sm font-medium">
+                        <span>View All</span>
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Category 4 -->
+            <a href="/pages/ads/listing.html?category=jobs" class="group relative overflow-hidden rounded-3xl bg-white shadow-xl transform hover:scale-105 transition-all duration-300">
+                <div class="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-600 opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                <div class="relative p-8 text-white">
+                    <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
+                        <i class="fas fa-briefcase text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 text-center">Jobs</h3>
+                    <p class="text-white/90 mb-2 text-center">890 active ads</p>
+                    <p class="text-white/80 text-sm mb-4 text-center">Full-time, part-time, remote, and freelance opportunities. Find your next career move or hire talent.</p>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs text-white/70">Avg. Salary: $55,000</span>
+                        <span class="text-xs text-white/70">+67 this week</span>
+                    </div>
+                    <div class="flex items-center justify-center text-sm font-medium">
+                        <span>View All</span>
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Category 5 -->
+            <a href="/pages/ads/listing.html?category=furniture" class="group relative overflow-hidden rounded-3xl bg-white shadow-xl transform hover:scale-105 transition-all duration-300">
+                <div class="absolute inset-0 bg-gradient-to-br from-yellow-500 to-amber-600 opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                <div class="relative p-8 text-white">
+                    <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
+                        <i class="fas fa-couch text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 text-center">Furniture</h3>
+                    <p class="text-white/90 mb-2 text-center">3,450 active ads</p>
+                    <p class="text-white/80 text-sm mb-4 text-center">Sofas, tables, chairs, beds, and home décor. Furnish your space with quality pieces at great prices.</p>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs text-white/70">Avg. Price: $280</span>
+                        <span class="text-xs text-white/70">+234 this week</span>
+                    </div>
+                    <div class="flex items-center justify-center text-sm font-medium">
+                        <span>View All</span>
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Category 6 -->
+            <a href="/pages/ads/listing.html?category=mobiles" class="group relative overflow-hidden rounded-3xl bg-white shadow-xl transform hover:scale-105 transition-all duration-300">
+                <div class="absolute inset-0 bg-gradient-to-br from-indigo-500 to-violet-600 opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                <div class="relative p-8 text-white">
+                    <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
+                        <i class="fas fa-mobile-alt text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 text-center">Mobiles</h3>
+                    <p class="text-white/90 mb-2 text-center">4,230 active ads</p>
+                    <p class="text-white/80 text-sm mb-4 text-center">Latest smartphones, accessories, cases, and chargers. Upgrade your mobile device today with best deals.</p>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs text-white/70">Avg. Price: $650</span>
+                        <span class="text-xs text-white/70">+298 this week</span>
+                    </div>
+                    <div class="flex items-center justify-center text-sm font-medium">
+                        <span>View All</span>
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Category 7 -->
+            <a href="/pages/ads/listing.html?category=fashion" class="group relative overflow-hidden rounded-3xl bg-white shadow-xl transform hover:scale-105 transition-all duration-300">
+                <div class="absolute inset-0 bg-gradient-to-br from-pink-500 to-rose-600 opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                <div class="relative p-8 text-white">
+                    <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
+                        <i class="fas fa-tshirt text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 text-center">Fashion</h3>
+                    <p class="text-white/90 mb-2 text-center">2,890 active ads</p>
+                    <p class="text-white/80 text-sm mb-4 text-center">Clothing, shoes, bags, jewelry, and accessories. Express your style with trendy fashion finds.</p>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs text-white/70">Avg. Price: $85</span>
+                        <span class="text-xs text-white/70">+187 this week</span>
+                    </div>
+                    <div class="flex items-center justify-center text-sm font-medium">
+                        <span>View All</span>
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Category 8 -->
+            <a href="/pages/ads/listing.html?category=sports" class="group relative overflow-hidden rounded-3xl bg-white shadow-xl transform hover:scale-105 transition-all duration-300">
+                <div class="absolute inset-0 bg-gradient-to-br from-teal-500 to-green-600 opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                <div class="relative p-8 text-white">
+                    <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
+                        <i class="fas fa-football-ball text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 text-center">Sports</h3>
+                    <p class="text-white/90 mb-2 text-center">1,650 active ads</p>
+                    <p class="text-white/80 text-sm mb-4 text-center">Equipment, gear, bicycles, fitness machines, and outdoor gear. Stay active with quality sports equipment.</p>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs text-white/70">Avg. Price: $320</span>
+                        <span class="text-xs text-white/70">+142 this week</span>
+                    </div>
+                    <div class="flex items-center justify-center text-sm font-medium">
+                        <span>View All</span>
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Category 9 -->
+            <a href="/pages/ads/listing.html?category=books" class="group relative overflow-hidden rounded-3xl bg-white shadow-xl transform hover:scale-105 transition-all duration-300">
+                <div class="absolute inset-0 bg-gradient-to-br from-amber-500 to-orange-600 opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                <div class="relative p-8 text-white">
+                    <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
+                        <i class="fas fa-book text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 text-center">Books</h3>
+                    <p class="text-white/90 mb-2 text-center">890 active ads</p>
+                    <p class="text-white/80 text-sm mb-4 text-center">Fiction, non-fiction, textbooks, comics, and magazines. Expand your library with great reads.</p>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs text-white/70">Avg. Price: $15</span>
+                        <span class="text-xs text-white/70">+76 this week</span>
+                    </div>
+                    <div class="flex items-center justify-center text-sm font-medium">
+                        <span>View All</span>
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Category Tips Section -->
+        <div class="mt-16 bg-white rounded-2xl shadow-lg p-8 mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">Tips for Buying & Selling</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-search text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Search Smartly</h3>
+                    <p class="text-sm text-gray-600">Use specific keywords and filters to find exactly what you're looking for quickly.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-camera text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Great Photos</h3>
+                    <p class="text-sm text-gray-600">Upload clear, well-lit photos from multiple angles to attract more buyers.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-handshake text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Meet Safely</h3>
+                    <p class="text-sm text-gray-600">Always meet in public places and inspect items before completing transactions.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popular Subcategories -->
+        <div class="mt-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Popular Subcategories</h2>
+            <p class="text-center text-gray-600 mb-8">Explore trending subcategories across all categories</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <a href="/pages/ads/listing.html?subcategory=iphone" class="bg-white rounded-xl p-4 text-center shadow-md hover:shadow-lg transition-all hover:border-2 hover:border-purple-500">
+                    <i class="fas fa-mobile-alt text-3xl text-purple-600 mb-2"></i>
+                    <div class="font-semibold text-gray-900 text-sm">iPhone</div>
+                </a>
+                <a href="/pages/ads/listing.html?subcategory=sedan" class="bg-white rounded-xl p-4 text-center shadow-md hover:shadow-lg transition-all hover:border-2 hover:border-purple-500">
+                    <i class="fas fa-car text-3xl text-red-600 mb-2"></i>
+                    <div class="font-semibold text-gray-900 text-sm">Sedan</div>
+                </a>
+                <a href="/pages/ads/listing.html?subcategory=apartment" class="bg-white rounded-xl p-4 text-center shadow-md hover:shadow-lg transition-all hover:border-2 hover:border-purple-500">
+                    <i class="fas fa-building text-3xl text-green-600 mb-2"></i>
+                    <div class="font-semibold text-gray-900 text-sm">Apartment</div>
+                </a>
+                <a href="/pages/ads/listing.html?subcategory=laptop" class="bg-white rounded-xl p-4 text-center shadow-md hover:shadow-lg transition-all hover:border-2 hover:border-purple-500">
+                    <i class="fas fa-laptop text-3xl text-blue-600 mb-2"></i>
+                    <div class="font-semibold text-gray-900 text-sm">Laptop</div>
+                </a>
+                <a href="/pages/ads/listing.html?subcategory=sofa" class="bg-white rounded-xl p-4 text-center shadow-md hover:shadow-lg transition-all hover:border-2 hover:border-purple-500">
+                    <i class="fas fa-couch text-3xl text-yellow-600 mb-2"></i>
+                    <div class="font-semibold text-gray-900 text-sm">Sofa</div>
+                </a>
+                <a href="/pages/ads/listing.html?subcategory=full-time" class="bg-white rounded-xl p-4 text-center shadow-md hover:shadow-lg transition-all hover:border-2 hover:border-purple-500">
+                    <i class="fas fa-briefcase text-3xl text-purple-600 mb-2"></i>
+                    <div class="font-semibold text-gray-900 text-sm">Full-Time</div>
+                </a>
+                <a href="/pages/ads/listing.html?subcategory=smartwatch" class="bg-white rounded-xl p-4 text-center shadow-md hover:shadow-lg transition-all hover:border-2 hover:border-purple-500">
+                    <i class="fas fa-clock text-3xl text-indigo-600 mb-2"></i>
+                    <div class="font-semibold text-gray-900 text-sm">Smartwatch</div>
+                </a>
+                <a href="/pages/ads/listing.html?subcategory=bicycle" class="bg-white rounded-xl p-4 text-center shadow-md hover:shadow-lg transition-all hover:border-2 hover:border-purple-500">
+                    <i class="fas fa-bicycle text-3xl text-teal-600 mb-2"></i>
+                    <div class="font-semibold text-gray-900 text-sm">Bicycle</div>
+                </a>
+                <a href="/pages/ads/listing.html?subcategory=watch" class="bg-white rounded-xl p-4 text-center shadow-md hover:shadow-lg transition-all hover:border-2 hover:border-purple-500">
+                    <i class="fas fa-clock text-3xl text-pink-600 mb-2"></i>
+                    <div class="font-semibold text-gray-900 text-sm">Watch</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Category Stats -->
+        <div class="mt-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl shadow-2xl p-12 text-white">
+            <h2 class="text-3xl font-bold mb-8 text-center">Platform Statistics</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-5xl font-bold mb-2">50K+</div>
+                    <div class="text-white/90">Total Listings</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-bold mb-2">25K+</div>
+                    <div class="text-white/90">Active Users</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-bold mb-2">200+</div>
+                    <div class="text-white/90">Categories</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-bold mb-2">98%</div>
+                    <div class="text-white/90">Satisfaction Rate</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        function fixLinksInComponent(container) {
+            const base = window.BASE_PATH || '/';
+            if (base === '/') return;
+            
+            const links = container.querySelectorAll('a[href]');
+            links.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href && 
+                    !href.startsWith('http://') && 
+                    !href.startsWith('https://') && 
+                    !href.startsWith('javascript:') &&
+                    !href.startsWith('mailto:') &&
+                    !href.startsWith('tel:') &&
+                    !href.startsWith('#') &&
+                    !href.startsWith(base)) {
+                    if (href.startsWith('/')) {
+                        link.setAttribute('href', base + href.substring(1));
+                    }
+                }
+            });
+        }
+        
+        // Fix all links in the entire document
+        function fixAllLinks() {
+            fixLinksInComponent(document.body);
+        }
+        
+        function getPath(path) {
+            const base = window.BASE_PATH || '/';
+            if (path.startsWith('http://') || path.startsWith('https://')) return path;
+            const cleanPath = path.startsWith('/') ? path.substring(1) : path;
+            const baseClean = base.endsWith('/') ? base : base + '/';
+            return baseClean + cleanPath;
+        }
+        
+        const base = window.BASE_PATH || '/';
+        const headerPath = getPath('components/header.html');
+        const footerPath = getPath('components/footer.html');
+        
+        fetch(headerPath)
+            .then(response => response.text())
+            .then(data => {
+                const placeholder = document.getElementById('header-placeholder');
+                if (placeholder) {
+                    placeholder.innerHTML = data;
+                    fixLinksInComponent(placeholder);
+                }
+            });
+        fetch(footerPath)
+            .then(response => response.text())
+            .then(data => {
+                const placeholder = document.getElementById('footer-placeholder');
+                if (placeholder) {
+                    placeholder.innerHTML = data;
+                    fixLinksInComponent(placeholder);
+                }
+            });
+        
+        // Fix all links in the page after DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', fixAllLinks);
+        } else {
+            fixAllLinks();
+        }
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - AdClassify</title>
+    <!-- Base path detection for GitHub Pages -->
+    <script src="../../assets/js/github-pages-base.js"></script>
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    <link rel="alternate icon" href="../../favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <div id="header-placeholder"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-6 lg:px-8 py-8 md:py-12">
+        <div class="text-center mb-8 md:mb-12">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4">About AdClassify</h1>
+            <p class="text-lg md:text-xl text-gray-600 px-4">Connecting buyers and sellers nationwide</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 lg:p-12 mb-8 md:mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6 text-center">Our Story</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                AdClassify was founded in 2020 with a simple mission: to make buying and selling easier, safer, and more accessible for everyone. 
+                We've grown from a small local platform to a nationwide marketplace serving thousands of users every day.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+                Our platform combines cutting-edge technology with user-friendly design to create the best classified ads experience. 
+                We're committed to building trust, ensuring safety, and helping our community find exactly what they're looking for.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
+            <!-- Our Mission Card -->
+            <div class="relative overflow-hidden rounded-2xl shadow-lg group h-56 md:h-64">
+                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?w=600&h=400&fit=crop');"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-purple-900/90 via-purple-700/70 to-purple-600/50 group-hover:from-purple-900/95 transition-all"></div>
+                <div class="relative h-full flex flex-col items-center justify-center text-center p-4 md:p-6 text-white">
+                    <div class="w-16 md:w-20 h-16 md:h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center mb-3 md:mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-users text-3xl md:text-4xl"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold mb-2">Our Mission</h3>
+                    <p class="text-sm md:text-base text-white/90">To connect people and create opportunities through a trusted marketplace</p>
+                </div>
+            </div>
+
+            <!-- Safety First Card -->
+            <div class="relative overflow-hidden rounded-2xl shadow-lg group h-56 md:h-64">
+                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop');"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-700/70 to-blue-600/50 group-hover:from-blue-900/95 transition-all"></div>
+                <div class="relative h-full flex flex-col items-center justify-center text-center p-4 md:p-6 text-white">
+                    <div class="w-16 md:w-20 h-16 md:h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center mb-3 md:mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-shield-alt text-3xl md:text-4xl"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold mb-2">Safety First</h3>
+                    <p class="text-sm md:text-base text-white/90">We prioritize user safety with verification and moderation</p>
+                </div>
+            </div>
+
+            <!-- Community Card -->
+            <div class="relative overflow-hidden rounded-2xl shadow-lg group h-56 md:h-64">
+                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop');"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-green-900/90 via-green-700/70 to-green-600/50 group-hover:from-green-900/95 transition-all"></div>
+                <div class="relative h-full flex flex-col items-center justify-center text-center p-4 md:p-6 text-white">
+                    <div class="w-16 md:w-20 h-16 md:h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center mb-3 md:mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-heart text-3xl md:text-4xl"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold mb-2">Community</h3>
+                    <p class="text-sm md:text-base text-white/90">Building a positive and supportive community of users</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        const base = window.BASE_PATH || '/';
+        fetch(base + 'components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                const placeholder = document.getElementById('header-placeholder');
+                if (placeholder) {
+                    placeholder.innerHTML = data;
+                    if (typeof fixLinksInContainer === 'function') fixLinksInContainer(placeholder);
+                }
+            });
+        fetch(base + 'components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                const placeholder = document.getElementById('footer-placeholder');
+                if (placeholder) {
+                    placeholder.innerHTML = data;
+                    if (typeof fixLinksInContainer === 'function') fixLinksInContainer(placeholder);
+                }
+            });
+    </script>
+    <script src="../../assets/js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - AdClassify</title>
+    <!-- Base path detection for GitHub Pages -->
+    <script src="../../assets/js/github-pages-base.js"></script>
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    <link rel="alternate icon" href="../../favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <div id="header-placeholder"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Profile Header - Banner Design -->
+        <div class="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-700 rounded-3xl shadow-2xl mb-8 overflow-hidden relative">
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+            
+            <div class="relative px-8 py-12 text-white">
+                <div class="flex flex-col md:flex-row items-center md:items-end space-y-4 md:space-y-0 md:space-x-6">
+                    <div class="relative">
+                        <img src="https://ui-avatars.com/api/?name=John+Doe&background=ffffff&color=667eea&size=150" 
+                             alt="Profile" 
+                             class="w-32 h-32 rounded-full border-4 border-white shadow-xl">
+                        <button class="absolute bottom-0 right-0 bg-white text-purple-600 p-3 rounded-full shadow-lg hover:bg-gray-100 transition-colors">
+                            <i class="fas fa-camera"></i>
+                        </button>
+                    </div>
+                    <div class="flex-1 text-center md:text-left">
+                        <h1 class="text-4xl font-bold mb-2">John Doe</h2>
+                        <p class="text-white/90 mb-4"><i class="fas fa-envelope mr-2"></i>john@example.com</p>
+                        <div class="flex flex-wrap items-center justify-center md:justify-start gap-3">
+                            <span class="px-4 py-2 bg-white/20 backdrop-blur-md rounded-full text-sm">
+                                <i class="fas fa-shield-alt mr-2"></i>Verified Member
+                            </span>
+                            <span class="px-4 py-2 bg-white/20 backdrop-blur-md rounded-full text-sm">
+                                <i class="fas fa-star mr-2"></i>4.8 Rating
+                            </span>
+                            <span class="px-4 py-2 bg-white/20 backdrop-blur-md rounded-full text-sm">
+                                Member since 2023
+                            </span>
+                        </div>
+                    </div>
+                    <button class="px-6 py-3 bg-white text-purple-600 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-edit mr-2"></i>Edit Profile
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Main Content -->
+            <div class="md:col-span-2 space-y-6">
+                <!-- Personal Information - Tabbed Design -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="border-b border-gray-200">
+                        <nav class="flex -mb-px">
+                            <button class="px-6 py-4 border-b-2 border-purple-600 text-purple-600 font-medium">
+                                Personal Info
+                            </button>
+                            <button class="px-6 py-4 text-gray-600 hover:text-purple-600 font-medium">
+                                Address
+                            </button>
+                            <button class="px-6 py-4 text-gray-600 hover:text-purple-600 font-medium">
+                                Preferences
+                            </button>
+                        </nav>
+                    </div>
+
+                    <div class="p-6">
+                        <form class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                                    <input type="text" value="John" 
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                                    <input type="text" value="Doe" 
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                                <input type="email" value="john@example.com" 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                                <input type="tel" value="+1 (555) 123-4567" 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Bio</label>
+                                <textarea rows="4" 
+                                          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                          placeholder="Tell us about yourself">Experienced seller with 5+ years on the platform. I specialize in electronics and collectibles.</textarea>
+                            </div>
+
+                            <button type="submit" class="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all">
+                                Save Changes
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Statistics -->
+                <div class="bg-white rounded-2xl shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6">Statistics</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="text-center p-4 bg-purple-50 rounded-xl">
+                            <div class="text-3xl font-bold text-purple-600">24</div>
+                            <div class="text-sm text-gray-600 mt-1">Active Ads</div>
+                        </div>
+                        <div class="text-center p-4 bg-blue-50 rounded-xl">
+                            <div class="text-3xl font-bold text-blue-600">156</div>
+                            <div class="text-sm text-gray-600 mt-1">Total Sales</div>
+                        </div>
+                        <div class="text-center p-4 bg-green-50 rounded-xl">
+                            <div class="text-3xl font-bold text-green-600">4.8</div>
+                            <div class="text-sm text-gray-600 mt-1">Rating</div>
+                        </div>
+                        <div class="text-center p-4 bg-orange-50 rounded-xl">
+                            <div class="text-3xl font-bold text-orange-600">89</div>
+                            <div class="text-sm text-gray-600 mt-1">Reviews</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="space-y-6">
+                <!-- Verification Badge -->
+                <div class="bg-gradient-to-br from-green-400 to-green-600 rounded-2xl p-6 text-white shadow-lg">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-check-circle text-3xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Verified Account</h3>
+                        <p class="text-white/90 text-sm">Your identity has been verified</p>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="bg-white rounded-2xl shadow-lg p-6">
+                    <h3 class="text-lg font-bold text-gray-900 mb-4">Contact Information</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center text-gray-600">
+                            <i class="fas fa-map-marker-alt w-5 text-purple-600"></i>
+                            <span class="ml-3">New York, NY</span>
+                        </div>
+                        <div class="flex items-center text-gray-600">
+                            <i class="fas fa-phone w-5 text-purple-600"></i>
+                            <span class="ml-3">+1 (555) 123-4567</span>
+                        </div>
+                        <div class="flex items-center text-gray-600">
+                            <i class="fas fa-globe w-5 text-purple-600"></i>
+                            <span class="ml-3">English</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Links -->
+                <div class="bg-white rounded-2xl shadow-lg p-6">
+                    <h3 class="text-lg font-bold text-gray-900 mb-4">Social Links</h3>
+                    <div class="space-y-3">
+                        <a href="#" class="flex items-center text-gray-600 hover:text-purple-600 transition-colors">
+                            <i class="fab fa-facebook w-5"></i>
+                            <span class="ml-3">Facebook</span>
+                        </a>
+                        <a href="#" class="flex items-center text-gray-600 hover:text-purple-600 transition-colors">
+                            <i class="fab fa-twitter w-5"></i>
+                            <span class="ml-3">Twitter</span>
+                        </a>
+                        <a href="#" class="flex items-center text-gray-600 hover:text-purple-600 transition-colors">
+                            <i class="fab fa-instagram w-5"></i>
+                            <span class="ml-3">Instagram</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Recent Reviews -->
+                <div class="bg-white rounded-2xl shadow-lg p-6">
+                    <h3 class="text-lg font-bold text-gray-900 mb-4">Recent Reviews</h3>
+                    <div class="space-y-4">
+                        <div class="pb-4 border-b">
+                            <div class="flex items-center mb-2">
+                                <img src="https://ui-avatars.com/api/?name=Sarah+J&background=f093fb&color=fff&size=40" 
+                                     alt="Reviewer" 
+                                     class="w-10 h-10 rounded-full mr-3">
+                                <div>
+                                    <div class="font-semibold text-sm">Sarah Johnson</div>
+                                    <div class="flex text-yellow-400 text-xs">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600">Great seller! Fast shipping and exactly as described.</p>
+                        </div>
+                        <div>
+                            <div class="flex items-center mb-2">
+                                <img src="https://ui-avatars.com/api/?name=Mike+W&background=4facfe&color=fff&size=40" 
+                                     alt="Reviewer" 
+                                     class="w-10 h-10 rounded-full mr-3">
+                                <div>
+                                    <div class="font-semibold text-sm">Mike Wilson</div>
+                                    <div class="flex text-yellow-400 text-xs">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600">Very responsive and professional. Highly recommend!</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        const base = window.BASE_PATH || '/';
+        fetch(base + 'components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                const placeholder = document.getElementById('header-placeholder');
+                if (placeholder) {
+                    placeholder.innerHTML = data;
+                    if (typeof fixLinksInContainer === 'function') fixLinksInContainer(placeholder);
+                }
+            });
+        fetch(base + 'components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                const placeholder = document.getElementById('footer-placeholder');
+                if (placeholder) {
+                    placeholder.innerHTML = data;
+                    if (typeof fixLinksInContainer === 'function') fixLinksInContainer(placeholder);
+                }
+            });
+    </script>
+    <script src="../../assets/js/main.js"></script>
+</body>
+</html>
+

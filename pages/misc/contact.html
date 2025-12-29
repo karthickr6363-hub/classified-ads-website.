@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - AdClassify</title>
+    <!-- Base path detection for GitHub Pages -->
+    <script src="../../assets/js/github-pages-base.js"></script>
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    <link rel="alternate icon" href="../../favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gradient-to-br from-gray-50 via-purple-50 to-blue-50">
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-700 py-20">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        <div class="absolute top-20 left-10 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+        <div class="absolute top-40 right-10 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 animate-fadeIn">Get in Touch</h1>
+            <p class="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto animate-fadeIn">We're here to help! Reach out to us and we'll respond as soon as possible.</p>
+            <div class="flex items-center justify-center space-x-8 mt-8 text-white/80">
+                <div class="flex items-center">
+                    <i class="fas fa-headset text-2xl mr-3"></i>
+                    <span>24/7 Support</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-clock text-2xl mr-3"></i>
+                    <span>Quick Response</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-shield-alt text-2xl mr-3"></i>
+                    <span>Secure & Safe</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-6 lg:px-8 py-12 md:py-16 -mt-8 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <!-- Contact Form - Takes 2 columns on desktop, full width on tablet -->
+            <div class="md:col-span-2 lg:col-span-2">
+                <div class="bg-white rounded-2xl md:rounded-3xl shadow-2xl p-6 md:p-8 lg:p-12 border border-gray-100">
+                    <div class="flex flex-col md:flex-row md:items-center mb-6 md:mb-8 gap-4 justify-center items-center md:items-start">
+                        <div class="w-14 md:w-16 h-14 md:h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-xl md:rounded-2xl flex items-center justify-center md:mr-4 flex-shrink-0 mx-auto md:mx-0">
+                            <i class="fas fa-paper-plane text-white text-xl md:text-2xl"></i>
+                        </div>
+                        <div class="text-center md:text-left">
+                            <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Send us a Message</h2>
+                            <p class="text-sm md:text-base text-gray-600">Fill out the form below and we'll get back to you</p>
+                        </div>
+                    </div>
+                    
+                    <form class="space-y-4 md:space-y-6" id="contactForm">
+                        <div class="grid md:grid-cols-2 gap-4 md:gap-6">
+                            <div class="group">
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                    <i class="fas fa-user text-purple-600 mr-2"></i>Your Name
+                                </label>
+                                <input type="text" required 
+                                       class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all group-hover:border-purple-300"
+                                       placeholder="John Doe">
+                            </div>
+                            <div class="group">
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                    <i class="fas fa-envelope text-purple-600 mr-2"></i>Email Address
+                                </label>
+                                <input type="email" required 
+                                       class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all group-hover:border-purple-300"
+                                       placeholder="john@example.com">
+                            </div>
+                        </div>
+                        <div class="group">
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                <i class="fas fa-tag text-purple-600 mr-2"></i>Subject
+                            </label>
+                            <input type="text" required 
+                                   class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all group-hover:border-purple-300"
+                                   placeholder="What can we help you with?">
+                        </div>
+                        <div class="group">
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                <i class="fas fa-comment-dots text-purple-600 mr-2"></i>Your Message
+                            </label>
+                            <textarea rows="6" required 
+                                      class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all group-hover:border-purple-300 resize-none"
+                                      placeholder="Tell us more about your inquiry..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white rounded-xl font-bold text-base md:text-lg hover:shadow-2xl hover:scale-105 transition-all relative overflow-hidden btn-modern">
+                            <span class="relative z-10">
+                                <i class="fas fa-paper-plane mr-2"></i>Send Message
+                            </span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Map Section -->
+                <div class="mt-6 md:mt-8 bg-white rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
+                    <div class="p-4 md:p-6 bg-gradient-to-r from-purple-600 to-blue-600">
+                        <h3 class="text-xl md:text-2xl font-bold text-white flex items-center justify-center">
+                            <i class="fas fa-map-marked-alt mr-2 md:mr-3"></i>Find Us
+                        </h3>
+                        <p class="text-sm md:text-base text-white/90 mt-2 text-center">Visit our office in New York</p>
+                    </div>
+                    <div class="h-64 md:h-80 lg:h-96 w-full">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.184132675892!2d-73.9881294845937!3d40.7488179793268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="w-full h-full">
+                        </iframe>
+                    </div>
+                    <div class="p-4 md:p-6 bg-gray-50">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+                            <div>
+                                <p class="text-xs md:text-sm font-semibold text-gray-900">123 Main Street, New York, NY 10001</p>
+                                <p class="text-xs md:text-sm text-gray-600 mt-1">United States</p>
+                            </div>
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=123+Main+Street+New+York+NY+10001" 
+                               target="_blank"
+                               class="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium text-sm md:text-base text-center">
+                                <i class="fas fa-directions mr-2"></i>Get Directions
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Connect With Us Section -->
+                <div class="mt-6 md:mt-8 bg-white rounded-2xl md:rounded-3xl shadow-2xl p-6 md:p-8 border border-gray-100">
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 flex items-center justify-center">
+                        <span class="w-1 h-6 md:h-8 bg-gradient-to-b from-purple-600 to-blue-600 rounded-full mr-2 md:mr-3"></span>
+                        Connect With Us
+                    </h3>
+                    <p class="text-sm md:text-base text-gray-600 mb-4 md:mb-6 text-center">Follow us on social media for updates and news</p>
+                    <div class="flex flex-wrap justify-center gap-3 md:gap-4">
+                        <a href="#" class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white hover:scale-110 hover:shadow-xl transition-all">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="w-14 h-14 bg-gradient-to-br from-sky-400 to-sky-500 rounded-full flex items-center justify-center text-white hover:scale-110 hover:shadow-xl transition-all">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="w-14 h-14 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full flex items-center justify-center text-white hover:scale-110 hover:shadow-xl transition-all">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="w-14 h-14 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center text-white hover:scale-110 hover:shadow-xl transition-all">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="#" class="w-14 h-14 bg-gradient-to-br from-blue-700 to-blue-800 rounded-full flex items-center justify-center text-white hover:scale-110 hover:shadow-xl transition-all">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar - Contact Info -->
+            <div class="md:col-span-2 lg:col-span-1">
+                <div class="grid md:grid-cols-2 lg:grid-cols-1 gap-6 md:gap-6 lg:gap-6">
+                <!-- Contact Info Cards -->
+                <div class="bg-white rounded-2xl md:rounded-3xl shadow-2xl p-6 md:p-8 border border-gray-100">
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 flex items-center justify-center">
+                        <span class="w-1 h-6 md:h-8 bg-gradient-to-b from-purple-600 to-blue-600 rounded-full mr-2 md:mr-3"></span>
+                        Contact Information
+                    </h3>
+                    <div class="space-y-4 md:space-y-6">
+                        <a href="#" class="flex items-start space-x-3 md:space-x-4 p-3 md:p-4 rounded-xl hover:bg-purple-50 transition-all group">
+                            <div class="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-white text-lg md:text-xl"></i>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-bold text-gray-900 mb-1 text-sm md:text-base">Address</h4>
+                                <p class="text-gray-600 text-xs md:text-sm">123 Main Street<br>New York, NY 10001</p>
+                            </div>
+                        </a>
+                        <a href="tel:+15551234567" class="flex items-start space-x-3 md:space-x-4 p-3 md:p-4 rounded-xl hover:bg-blue-50 transition-all group">
+                            <div class="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg flex-shrink-0">
+                                <i class="fas fa-phone text-white text-lg md:text-xl"></i>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-bold text-gray-900 mb-1 text-sm md:text-base">Phone</h4>
+                                <p class="text-gray-600 text-xs md:text-sm">+1 (555) 123-4567</p>
+                            </div>
+                        </a>
+                        <a href="mailto:support@adclassify.com" class="flex items-start space-x-3 md:space-x-4 p-3 md:p-4 rounded-xl hover:bg-green-50 transition-all group">
+                            <div class="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg flex-shrink-0">
+                                <i class="fas fa-envelope text-white text-lg md:text-xl"></i>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-bold text-gray-900 mb-1 text-sm md:text-base">Email</h4>
+                                <p class="text-gray-600 text-xs md:text-sm break-words">support@adclassify.com</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Business Hours Card -->
+                <div class="bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-700 rounded-2xl md:rounded-3xl shadow-2xl p-6 md:p-8 text-white relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 md:w-32 md:h-32 bg-white/10 rounded-full -mr-12 md:-mr-16 -mt-12 md:-mt-16"></div>
+                    <div class="absolute bottom-0 left-0 w-24 h-24 md:w-32 md:h-32 bg-white/10 rounded-full -ml-12 md:-ml-16 -mb-12 md:-mb-16"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-xl md:text-2xl font-bold mb-4 md:mb-6 flex items-center justify-center">
+                            <i class="fas fa-clock mr-2 md:mr-3"></i>Business Hours
+                        </h3>
+                        <div class="space-y-3 md:space-y-4">
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 p-3 bg-white/10 backdrop-blur-sm rounded-lg">
+                                <span class="font-medium text-sm md:text-base">Monday - Friday</span>
+                                <span class="font-bold text-sm md:text-base">9:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 p-3 bg-white/10 backdrop-blur-sm rounded-lg">
+                                <span class="font-medium text-sm md:text-base">Saturday</span>
+                                <span class="font-bold text-sm md:text-base">10:00 AM - 4:00 PM</span>
+                            </div>
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 p-3 bg-white/10 backdrop-blur-sm rounded-lg">
+                                <span class="font-medium text-sm md:text-base">Sunday</span>
+                                <span class="font-bold text-red-200 text-sm md:text-base">Closed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links Card -->
+                <div class="bg-white rounded-2xl md:rounded-3xl shadow-2xl p-6 md:p-8 border border-gray-100">
+                    <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-4 text-center">Quick Links</h3>
+                    <div class="space-y-3">
+                        <a href="/pages/misc/help.html" class="flex items-center p-3 rounded-lg hover:bg-purple-50 text-gray-700 hover:text-purple-600 transition-all text-sm md:text-base">
+                            <i class="fas fa-question-circle w-5 mr-3 text-purple-600"></i>
+                            <span>Help Center</span>
+                        </a>
+                        <a href="/pages/misc/about.html" class="flex items-center p-3 rounded-lg hover:bg-purple-50 text-gray-700 hover:text-purple-600 transition-all text-sm md:text-base">
+                            <i class="fas fa-info-circle w-5 mr-3 text-blue-600"></i>
+                            <span>About Us</span>
+                        </a>
+                        <a href="/pages/misc/terms.html" class="flex items-center p-3 rounded-lg hover:bg-purple-50 text-gray-700 hover:text-purple-600 transition-all text-sm md:text-base">
+                            <i class="fas fa-file-contract w-5 mr-3 text-green-600"></i>
+                            <span>Terms of Service</span>
+                        </a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        const base = window.BASE_PATH || '/';
+        fetch(base + 'components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                const placeholder = document.getElementById('header-placeholder');
+                if (placeholder) {
+                    placeholder.innerHTML = data;
+                    if (typeof fixLinksInContainer === 'function') fixLinksInContainer(placeholder);
+                }
+            });
+        fetch(base + 'components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                const placeholder = document.getElementById('footer-placeholder');
+                if (placeholder) {
+                    placeholder.innerHTML = data;
+                    if (typeof fixLinksInContainer === 'function') fixLinksInContainer(placeholder);
+                }
+            });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (validateForm('contactForm')) {
+                showToast('Message sent successfully! We\'ll get back to you soon.', 'success');
+                this.reset();
+            }
+        });
+    </script>
+    <script src="../../assets/js/main.js"></script>
+    
+    <!-- Tailwind config for animations -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+

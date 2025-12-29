@@ -1,0 +1,220 @@
+<!-- Main Header Component -->
+<header class="bg-white shadow-lg sticky top-0 z-[60] border-b border-gray-100 w-full">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 md:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16 gap-2 md:gap-4">
+            <!-- Logo -->
+            <div class="flex-shrink-0 flex items-center min-w-0">
+                <a href="/index.html" class="text-xl md:text-2xl font-bold bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent hover:scale-105 transition-transform inline-block whitespace-nowrap flex items-center">
+                    <span class="flex items-center">
+                        <span class="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg mr-2 md:mr-3 flex items-center justify-center text-white text-sm md:text-base font-bold">A</span>
+                        <span>AdClassify</span>
+                    </span>
+                </a>
+            </div>
+
+            <!-- Desktop Navigation - Centered (Visible on lg and above) -->
+            <div class="hidden lg:flex lg:items-center lg:justify-center lg:flex-1 lg:mx-4">
+                <div class="flex items-center space-x-3">
+                    <!-- Home Dropdown -->
+                    <div class="relative">
+                        <button id="homeDropdownButton" onclick="toggleHomeDropdown()" class="px-4 py-2 text-base text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all font-medium relative whitespace-nowrap flex items-center">
+                            Home
+                            <svg class="w-4 h-4 ml-1 transition-transform duration-200" id="homeDropdownArrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="homeDropdown" class="hidden absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-[100]">
+                            <a href="/index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors">
+                                <i class="fas fa-home mr-2 text-purple-600"></i>Home 1
+                            </a>
+                            <a href="/home2.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors">
+                                <i class="fas fa-fire mr-2 text-orange-600"></i>Home 2
+                            </a>
+                        </div>
+                    </div>
+                    <a href="/pages/ads/categories.html" class="px-4 py-2 text-base text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all font-medium relative group whitespace-nowrap">
+                        Categories
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="/pages/ads/post-ad.html" class="px-4 py-2 text-base text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all font-medium relative group whitespace-nowrap">
+                        Post Ad
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="/pages/misc/about.html" class="px-4 py-2 text-base text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all font-medium relative group whitespace-nowrap">
+                        About
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="/pages/misc/contact.html" class="px-4 py-2 text-base text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all font-medium relative group whitespace-nowrap">
+                        Contact
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <!-- Account Dropdown -->
+                    <div class="relative">
+                        <button id="accountDropdownButton" onclick="toggleAccountDropdown()" class="px-4 py-2 text-base text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all font-medium relative whitespace-nowrap flex items-center group">
+                            Account
+                            <svg class="w-4 h-4 ml-1 transition-transform duration-200" id="accountDropdownArrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 group-hover:w-full transition-all duration-300"></span>
+                        </button>
+                        <div id="accountDropdown" class="hidden absolute top-full right-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-[100]">
+                            <a href="/pages/auth/login.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors">
+                                <i class="fas fa-sign-in-alt mr-2 text-purple-600"></i>Login
+                            </a>
+                            <a href="/pages/auth/register.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors">
+                                <i class="fas fa-user-plus mr-2 text-blue-600"></i>Register
+                            </a>
+                            <a href="/pages/user/dashboard.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors">
+                                <i class="fas fa-tachometer-alt mr-2 text-green-600"></i>Dashboard
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Actions (Visible on lg and above) -->
+            <div class="flex-shrink-0 hidden lg:flex lg:items-center lg:space-x-3">
+                <a href="/pages/user/saved.html" class="text-gray-700 hover:text-purple-600 transition-colors relative p-2 flex items-center justify-center">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                    </svg>
+                    <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
+                </a>
+                <a href="/pages/user/messages.html" class="text-gray-700 hover:text-purple-600 transition-colors relative p-2 flex items-center justify-center">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                    </svg>
+                    <span class="absolute -top-1 -right-1 bg-purple-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">2</span>
+                </a>
+            </div>
+
+            <!-- Tablet menu button (Visible only on md to lg screens) -->
+            <div id="tabletMenuContainer" class="hidden md:flex lg:hidden items-center space-x-2 md:space-x-3">
+                <a href="/pages/user/saved.html" class="text-gray-700 hover:text-purple-600 transition-colors relative p-2 flex items-center justify-center rounded-lg hover:bg-purple-50">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                    </svg>
+                    <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center text-[10px] font-bold">3</span>
+                </a>
+                <a href="/pages/user/messages.html" class="text-gray-700 hover:text-purple-600 transition-colors relative p-2 flex items-center justify-center rounded-lg hover:bg-purple-50">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                    </svg>
+                    <span class="absolute -top-1 -right-1 bg-purple-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center text-[10px] font-bold">2</span>
+                </a>
+                <button id="tabMenuButton" onclick="toggleTabMenu()" class="text-gray-700 hover:text-purple-600 hover:bg-purple-50 p-2 transition-colors rounded-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile menu button (Visible only on mobile) -->
+            <div class="md:hidden">
+                <button id="menuButton" onclick="toggleMobileMenu()" class="text-gray-700 hover:text-purple-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tablet Menu Overlay Backdrop -->
+    <div id="tabMenuBackdrop" class="hidden md:block lg:hidden fixed inset-0 bg-black/50 transition-opacity duration-300" onclick="toggleTabMenu()"></div>
+
+    <!-- Tablet Menu Side Drawer (Visible only on md to lg screens) -->
+    <div id="tabMenu" class="hidden md:block lg:hidden fixed top-0 left-0 h-full w-80 bg-white shadow-2xl transform -translate-x-full transition-transform duration-300 ease-in-out pointer-events-auto overflow-hidden">
+        <!-- Menu Header -->
+        <div class="flex items-center justify-between p-4 border-b border-gray-200 bg-white relative z-20">
+            <div class="flex items-center">
+                <span class="w-8 h-8 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg mr-2 flex items-center justify-center text-white text-sm font-bold">A</span>
+                <span class="text-xl font-bold bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent">AdClassify</span>
+            </div>
+            <button onclick="toggleTabMenu()" class="p-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 active:bg-purple-100 rounded-lg transition-all duration-200 cursor-pointer touch-manipulation">
+                <svg class="w-6 h-6 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Menu Content -->
+        <div class="py-4 overflow-y-auto h-[calc(100vh-73px)] overscroll-contain bg-white relative z-10">
+            <nav class="px-2 space-y-1">
+                <!-- Home Dropdown Section -->
+                <div class="px-2 mb-2">
+                    <div class="text-xs font-semibold text-gray-500 uppercase tracking-wider px-4 py-2">Home Pages</div>
+                    <a href="/index.html" class="block px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 active:bg-purple-100 active:text-purple-700 rounded-lg transition-all duration-200 font-medium cursor-pointer touch-manipulation" onclick="toggleTabMenu()">
+                        <i class="fas fa-home mr-2 text-purple-600"></i>Home 1
+                    </a>
+                    <a href="/home2.html" class="block px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 active:bg-purple-100 active:text-purple-700 rounded-lg transition-all duration-200 font-medium cursor-pointer touch-manipulation" onclick="toggleTabMenu()">
+                        <i class="fas fa-fire mr-2 text-orange-600"></i>Home 2
+                    </a>
+                </div>
+                <div class="border-t border-gray-200 my-2"></div>
+                <a href="/pages/ads/categories.html" class="block px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 active:bg-purple-100 active:text-purple-700 rounded-lg transition-all duration-200 font-medium cursor-pointer touch-manipulation" onclick="toggleTabMenu()">
+                    Categories
+                </a>
+                <a href="/pages/ads/post-ad.html" class="block px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 active:bg-purple-100 active:text-purple-700 rounded-lg transition-all duration-200 font-medium cursor-pointer touch-manipulation" onclick="toggleTabMenu()">
+                    Post Ad
+                </a>
+                <a href="/pages/misc/about.html" class="block px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 active:bg-purple-100 active:text-purple-700 rounded-lg transition-all duration-200 font-medium cursor-pointer touch-manipulation" onclick="toggleTabMenu()">
+                    About
+                </a>
+                <a href="/pages/misc/contact.html" class="block px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 active:bg-purple-100 active:text-purple-700 rounded-lg transition-all duration-200 font-medium cursor-pointer touch-manipulation" onclick="toggleTabMenu()">
+                    Contact
+                </a>
+            </nav>
+
+            <!-- Separator -->
+            <div class="border-t border-gray-200 my-4"></div>
+
+            <!-- Account Section -->
+            <div class="px-2 mb-2">
+                <div class="text-xs font-semibold text-gray-500 uppercase tracking-wider px-4 py-2">Account</div>
+                <a href="/pages/auth/login.html" class="block px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 active:bg-purple-100 active:text-purple-700 rounded-lg transition-all duration-200 font-medium cursor-pointer touch-manipulation" onclick="toggleTabMenu()">
+                    <i class="fas fa-sign-in-alt mr-2 text-purple-600"></i>Login
+                </a>
+                <a href="/pages/auth/register.html" class="block px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 active:bg-purple-100 active:text-purple-700 rounded-lg transition-all duration-200 font-medium cursor-pointer touch-manipulation" onclick="toggleTabMenu()">
+                    <i class="fas fa-user-plus mr-2 text-blue-600"></i>Register
+                </a>
+                <a href="/pages/user/dashboard.html" class="block px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 active:bg-purple-100 active:text-purple-700 rounded-lg transition-all duration-200 font-medium cursor-pointer touch-manipulation" onclick="toggleTabMenu()">
+                    <i class="fas fa-tachometer-alt mr-2 text-green-600"></i>Dashboard
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu (Visible only on mobile) -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+            <div class="px-2 mb-2">
+                <div class="text-xs font-semibold text-gray-500 uppercase tracking-wider px-3 py-2">Home Pages</div>
+                <a href="/index.html" class="block px-3 py-2 text-gray-700 hover:bg-purple-50 rounded-md">
+                    <i class="fas fa-home mr-2 text-purple-600"></i>Home 1
+                </a>
+                <a href="/home2.html" class="block px-3 py-2 text-gray-700 hover:bg-purple-50 rounded-md">
+                    <i class="fas fa-fire mr-2 text-orange-600"></i>Home 2
+                </a>
+            </div>
+            <div class="border-t border-gray-200 my-2"></div>
+            <a href="/pages/ads/categories.html" class="block px-3 py-2 text-gray-700 hover:bg-purple-50 rounded-md">Categories</a>
+            <a href="/pages/ads/post-ad.html" class="block px-3 py-2 text-gray-700 hover:bg-purple-50 rounded-md">Post Ad</a>
+            <a href="/pages/misc/about.html" class="block px-3 py-2 text-gray-700 hover:bg-purple-50 rounded-md">About</a>
+            <a href="/pages/misc/contact.html" class="block px-3 py-2 text-gray-700 hover:bg-purple-50 rounded-md">Contact</a>
+            <div class="border-t border-gray-200 my-2"></div>
+            <div class="px-2 mb-2">
+                <div class="text-xs font-semibold text-gray-500 uppercase tracking-wider px-3 py-2">Account</div>
+                <a href="/pages/auth/login.html" class="block px-3 py-2 text-gray-700 hover:bg-purple-50 rounded-md">
+                    <i class="fas fa-sign-in-alt mr-2 text-purple-600"></i>Login
+                </a>
+                <a href="/pages/auth/register.html" class="block px-3 py-2 text-gray-700 hover:bg-purple-50 rounded-md">
+                    <i class="fas fa-user-plus mr-2 text-blue-600"></i>Register
+                </a>
+                <a href="/pages/user/dashboard.html" class="block px-3 py-2 text-gray-700 hover:bg-purple-50 rounded-md">
+                    <i class="fas fa-tachometer-alt mr-2 text-green-600"></i>Dashboard
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
